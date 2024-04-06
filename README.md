@@ -1,9 +1,10 @@
 # Auto-Recon by Ch33tah1
 Auto-Recon is a tool written in bash and designated to ease the job for pen-testers at the Web-App-Reconnaissance stage.
 This tool is running a comprehensive search to enumerate subdomains with a given $url.
-Some of the tools are passive while others are more active./n Don't worry, you will be asked whether you'd like to go more active or not.
-Passive recon – Not including engaement with the given domain.
-Active recon – Including engaement with the given domain.
+Some of the tools are passive while others are more active. Don't worry, you will be asked whether you'd like to go more active or not.
+
+# Passive recon – Not including engaement with the given domain.
+# Active recon – Including engaement with the given domain.
 
 # # NOTICE # #
 In order to use this tool, you have to make sure the next tools are pre-installed on your machine:
