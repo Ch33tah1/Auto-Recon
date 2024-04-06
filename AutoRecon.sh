@@ -58,8 +58,8 @@ subfinder -d $url -o $url-subfinder.txt 2> /dev/null
 #-----------------------------------------------------------------------------------
 #3 - Amass
 echo -e "${BOLD_RED}[+] Running subdomains with Amass...give it few minutes..${RESET}"
-amass enum -passive -d $url -timeout 7 > amass.txt 2> /dev/null
-cat amass.txt | grep FQDN | awk "{print $1;}" | sort | uniq > $url-Amass.txt
+amass enum -passive -d "$url" -timeout 7 > amass.txt 2> /dev/null
+cat amass.txt | grep FQDN | awk '{print $1;}' | sort | uniq > $url-Amass.txt
 rm amass.txt
 echo -e "${BOLD_GREEN}[+] Enumeration From Amass Saved in:\n$url/recon/$url-Amass.txt.${RESET}"
 #-----------------------------------------------------------------------------------
@@ -110,7 +110,7 @@ answer_lower=$(echo "$answer" | tr "[:upper:]" "[:lower:]")
 if [[ "$answer_lower" = "yes" || "$answer_lower" = "y" ]]; then
         echo -e "${BOLD_GREEN}You Got it! Great choice..${RESET}"
         echo -e "${BOLD_RED}[+] Enumerating via Dirsearch.py...${RESET}"
-        dirsearch.py -u "https://$url" -e "asp,aspx,htm,html,log,php,sql,txt,xml,/,js" -o "/home/kali/Desktop/Auto-recon/$url-dirsearch.txt"
+        dirsearch.py -u "https://$url" -e "asp,aspx,htm,html,log,php,sql,txt,xml,/,js" -o "$url-dirsearch.txt"
         echo -e "${BOLD_GREEN}[+] The output is saved in:\n$url/recon/$url-dirsearch.txt . Enjoy! ${RESET}"
 elif [[ "$answer_lower" = "no" || "$answer_lower" = "n" ]]; then
         echo -e "${BOLD_RED}Pussy is a pussy is a pussy...${RESET}"
