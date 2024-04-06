@@ -4,6 +4,7 @@ This tool is running a comprehensive search to enumerate subdomains with a given
 Some of the tools are passive while others are more active. Don't worry, you will be asked whether you'd like to go more active or not.
 
 Passive recon – Not including engaement with the given domain.
+
 Active recon – Including engaement with the given domain.
 
 # # NOTICE # #
